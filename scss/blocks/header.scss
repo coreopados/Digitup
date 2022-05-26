@@ -1,0 +1,115 @@
+header {
+    z-index: 12;
+    position: relative;
+
+    .container {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    padding-top: 56px;
+
+    .top-header {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+        font-family: "silk";
+        font-size: 22px;
+        max-width: 1190px;
+        width: 100%;
+
+        &__logo a {
+            display: inline-block;
+            height: 50px;
+
+            img {
+                z-index: 0;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .white-img,
+            .border-img,
+            .blue-img {
+                display: none;
+            }
+
+            .white-img.active,
+            .border-img.active,
+            .blue-img.active {
+                display: inline-block;
+            }
+        }
+
+        &__logo a:hover {
+            img {
+                transform: scale(0.9);
+                transition: 0.3s;
+            }
+        }
+
+        &__center {
+
+            width: 319px;
+            color: #183D9A;
+            font-family: "silk";
+            font-size: 22px;
+            font-weight: 500;
+            position: relative;
+            font-style: normal;
+            top: 4px;
+            left: -52px;
+        }
+
+        &__right {
+            .menu-button {
+                position: relative;
+                top: 8px;
+                left: -8px;
+                cursor: pointer;
+                display: inline-block;
+
+                img {
+                    transition: 0.3s;
+                }
+            }
+
+            .menu-button.active img {
+                transition: 0.2s;
+                transform: rotate(45deg);
+            }
+
+            .menu-button:hover {
+                img {
+                    transform: scale(0.9);
+                    transition: 0.3s;
+                }
+            }
+
+            .menu-button.active:hover img {
+                transition: 0.3s;
+                transform: rotate(45deg) scale(0.9);
+                ;
+            }
+        }
+    }
+
+    .top-header.fixed {
+        position: fixed;
+        top: 56px;
+    }
+}
+
+header.fixed {
+    position: fixed;
+    width: 100%;
+    max-width: 1440px;
+    top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
